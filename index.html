@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <!-- Cover Section -->
+  <section id="cover">
+    <div class="cover-content">
+      <h1>Welcome to Our Wedding</h1>
+      <button id="openInvitation">Open Invitation</button>
+    </div>
+  </section>
+
+  <!-- Invitation Sections -->
+  <section id="invitation" class="hidden">
+    <!-- Section 1: Bride & Groom -->
+    <section class="section" id="section1">
+      <div class="overlay">
+        <h2>The Wedding of</h2>
+        <h1>John & Jane</h1>
+      </div>
+    </section>
+
+    <!-- Section 2: Invitation and Countdown -->
+<section class="section" id="section2">
+    <div class="invitation-content">
+      <h2>You are Invited!</h2>
+      <p>We want you to be part of this special moment</p>
+  
+      <!-- Countdown Timer -->
+      <div id="countdown">
+        <div class="time-box">
+          <span id="days">00</span>
+          <span>Days</span>
+        </div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <span>Hours</span>
+        </div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <span>Minutes</span>
+        </div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <span>Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Section 3: Profile Pengantin -->
+<section class="section" id="section3">
+  <div class="lottie-container-profile" id="lottie-profile"></div> <!-- Lottie animation -->
+  <h2>Our Profiles</h2>
+  <div class="profile-container">
+    <!-- Profile Pengantin Wanita -->
+    <div class="profile bride-profile">
+      <img src="bridge.jpeg" alt="Bride" class="profile-photo"> <!-- Ganti path dengan path foto pengantin wanita -->
+      <h3 class="name">Bride Name</h3> <!-- Nama Pengantin Wanita -->
+      <p>Putri Pertama Dari</p>
+      <div class="parents">
+        <span class="father-name">Father's Name</span> <!-- Nama Bapak -->
+        <span class="separator-parents"></span>
+        <span class="mother-name">Mother's Name</span> <!-- Nama Ibu -->
+      </div>
+      <a href="https://www.instagram.com/bride" target="_blank" class="instagram-button">Instagram</a> <!-- Tombol Instagram -->
+    </div>
+
+    <!-- Profile Pengantin Pria -->
+    <div class="profile groom-profile">
+      <img src="groom.jpeg" alt="Groom" class="profile-photo"> <!-- Ganti path dengan path foto pengantin pria -->
+      <h3 class="name">Groom Name</h3> <!-- Nama Pengantin Pria -->
+      <p>Putra Pertama Dari</p>
+      <div class="parents">
+        <span class="father-name">Father's Name</span> <!-- Nama Bapak -->
+        <span class="separator-parents"></span>
+        <span class="mother-name">Mother's Name</span> <!-- Nama Ibu -->
+      </div>
+      <a href="https://www.instagram.com/groom" target="_blank" class="instagram-button">Instagram</a> <!-- Tombol Instagram -->
+    </div>
+  </div>
+</section>
+
+  
+<!-- Section 4: Akad dan Resepsi -->
+<section class="section" id="section4">
+<div>
+  <div class="lottie-container-ceremony" id="lottie-ceremony"></div> <!-- Lottie animation for Akad -->
+  <h2>AKAD</h2>
+  <div class="event-details">
+    <div class="date">
+      <div class="day">Saturday</div> <!-- Hari -->
+      <div class="month-date-time">
+        <span class="month-date">21 OKT</span> <!-- Bulan dan tanggal -->
+        <span class="separator"></span> <!-- Separator -->
+        <span class="time">10:00 AM</span> <!-- Jam -->
+      </div>
+    </div>
+    <div class="location">Location: Masjid Agung</div> <!-- Lokasi -->
+    <a href="https://goo.gl/maps/example" target="_blank" class="map-button">View Map</a>
+  </div>
+</div>
+
+<div>
+  <div class="lottie-container-reception" id="lottie-reception"></div> <!-- Lottie animation for Resepsi -->
+  <h2>RESEPSI</h2>
+  <div class="event-details">
+    <div class="date">
+      <div class="day">Saturday</div> <!-- Hari -->
+      <div class="month-date-time">
+        <span class="month-date">21 OKT</span> <!-- Bulan dan tanggal -->
+        <span class="separator"></span> <!-- Separator -->
+        <span class="time">01:00 PM</span> <!-- Jam -->
+      </div>
+    </div>
+    <div class="location">Location: Ballroom B</div> <!-- Lokasi -->
+    <a href="https://goo.gl/maps/example" target="_blank" class="map-button">View Map</a>
+  </div>
+</div>
+</section>
+
+
+<!-- Section 5: Ayat Al-Qur'an and Translation -->
+<section class="section" id="section5">
+  <div class="lottie-container-quran" id="lottie-quran"></div> <!-- Lottie animation for the title -->
+  <h2>We Found Love</h2>
+  <div class="quran-content">
+    <p class="arabic-text">
+      وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+    </p>
+    <p class="translation-text">
+      "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+    </p>
+    <p class="surah">(QS. Ar-Rum Ayat 21)</p>
+  </div>
+</section>
+
+<!-- Section 6: Gallery like Pinterest -->
+<section class="section" id="section6">
+  <div class="lottie-container-gallery" id="lottie-gallery"></div>
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="image1.jpeg" alt="Image 1" class="gallery-item" onclick="openModal(1)">
+    <img src="image2.jpeg" alt="Image 2" class="gallery-item" onclick="openModal(2)">
+    <img src="image3.jpeg" alt="Image 3" class="gallery-item" onclick="openModal(3)">
+    <img src="image4.jpeg" alt="Image 4" class="gallery-item" onclick="openModal(4)">
+    <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
+  </div>
+
+  <!-- Fullscreen Modal -->
+  <div id="galleryModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img class="modal-image" id="modalImage">
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: RSVP and Messages -->
+<section class="section" id="section7">
+  <div class="lottie-container-rsvp" id="lottie-rsvp"></div> <!-- Lottie animation for the title -->
+  <h2>RSVP & Messages</h2>
+
+  <!-- Form to submit RSVP and messages -->
+  <form id="rsvpForm">
+    <div class="form-group">
+      <input type="text" id="guestName" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+      <textarea id="guestMessage" placeholder="Your Message" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="attendance">Will you attend?</label>
+      <select id="attendance" required>
+        <option value="attending">Attending</option>
+        <option value="not-attending">Not Attending</option>
+        <option value="unsure">Unsure</option>
+      </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Container to display submitted messages -->
+  <div id="messageList">
+    <!-- Pesan akan ditampilkan di sini -->
+  </div>
+</section>
+
+<!-- Section 8: Gift -->
+<section class="section" id="section8">
+  <div class="lottie-container-gift" id="lottie-gift"></div> <!-- Lottie animation for the title -->
+  <h2>Gift</h2>
+  <p>If you wish to bless us with a gift, here is the bank account number:</p>
+  <button id="showAccountButton">Show</button>
+
+  <!-- Hidden Bank Account Number -->
+  <div id="bankAccountContainer" style="display: none;">
+    <p>Bank Account: <span id="bankAccountNumber">1234567890</span></p>
+    <button id="copyButton">Copy</button>
+  </div>
+</section>
+
+<!-- Section 9: Thank You -->
+<section class="section" id="section9">
+  <div class="lottie-container-thankyou" id="lottie-thankyou"></div> <!-- Lottie animation for the title -->
+  <h2>Thank You</h2>
+  <p>We are incredibly grateful that you could be a part of this special moment. Your presence means the world to us, and we sincerely thank you for taking the time to celebrate with us.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="logo">
+      <img src="nc logo.png" alt="Logo" />
+    </div>
+    <div class="social-media">
+      <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/your-number" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.yourwebsite.com" target="_blank" class="social-icon"><i class="fas fa-globe"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

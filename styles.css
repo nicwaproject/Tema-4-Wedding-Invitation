@@ -1,0 +1,670 @@
+/* Define custom properties in :root */
+:root {
+  --section-1: url('section1.jpeg'); /* Ganti dengan path gambar kamu */
+  --primary-color: #B68D40;
+  --secondary-color: #eaddc4;
+  --overlay-bg: rgba(0, 0, 0, 0.5); /* Overlay background color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+#cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('section1.jpeg');
+  background-size: cover;
+  text-align: center;
+}
+
+.cover-content h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.cover-content button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#invitation {
+  display: none;
+  background-color: #fff;
+}
+
+#invitation.active {
+  display: block;
+}
+
+
+/* Style for other sections */
+.section {
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.section p {
+  max-width: 600px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Section 1 with background image and overlay */
+#section1 {
+  position: relative;
+  background-image: var(--section-1); /* Use the custom property */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  color: black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#section1 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#section1 h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+/* ...................................SECTION 2.............................. */
+#section2 {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#section2 .invitation-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#section2 h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#section2 p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-box span:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.time-box span:last-child {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Section 3: The Bride and The Groom Profile */
+#section3 {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.lottie-container-profile {
+  width: 60px; /* Ukuran animasi lebih kecil */
+  height: 60px;
+  margin: 0 auto 20px; /* Jarak animasi ke judul */
+}
+
+#section3 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Penataan elemen secara vertikal */
+  flex-wrap: wrap; /* Mengizinkan elemen untuk membungkus ke baris berikutnya */
+  gap: 20px; /* Jarak antar profile */
+}
+
+.profile {
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px; /* Lebar profil */
+  text-align: center; /* Memusatkan teks */
+}
+
+.profile-photo {
+  width: 100%; /* Mengisi lebar kontainer */
+  border-radius: 8px; /* Sudut membulat untuk foto */
+}
+
+.name {
+  font-size: 1.7rem; /* Ukuran huruf untuk nama */
+  margin: 10px 0; /* Jarak antara nama dan informasi orang tua */
+}
+
+.parents {
+  display: flex;
+  justify-content: space-between; /* Memisahkan nama bapak dan ibu */
+  align-items: center;
+  font-size: 1rem; /* Ukuran huruf untuk nama orang tua */
+  margin: 10px 0; /* Jarak antara orang tua dan tombol */
+}
+
+.separator-parents {
+  width: 1px; /* Lebar separator */
+  height: 20px; /* Tinggi separator yang lebih panjang */
+  background-color: #333; /* Warna separator */
+  margin: 20px 0; /* Jarak horizontal di kedua sisi separator */
+}
+
+.instagram-button {
+  display: inline-block;
+  margin-top: 10px; /* Jarak antara nama orang tua dan tombol */
+  padding: 10px 20px; /* Padding tombol */
+  background-color: var(--primary-color); /* Warna latar belakang tombol Instagram */
+  color: white; /* Warna teks tombol */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  border-radius: 5px; /* Sudut membulat */
+  font-size: 1rem; /* Ukuran huruf tombol */
+}
+
+.instagram-button:hover {
+  background-color: #f3f3f3; /* Warna saat hover */
+  color: var(--primary-color);
+}
+
+
+/* Section 4: Akad dan Resepsi */
+#section4 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#section4 .lottie-container-ceremony,
+#section4 .lottie-container-reception {
+  width: 100px; /* Ukuran animasi lebih kecil */
+  height: 100px;
+  margin: 0 auto 10px; /* Jarak animasi ke judul */
+}
+
+#section4 h2 {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.event-details {
+  margin-bottom: 100px; /* Jarak antara setiap detail acara */
+}
+
+.date {
+  margin-bottom: 10px; /* Jarak antara tanggal dan lokasi */
+}
+
+.day {
+  font-size: 1.2rem; /* Ukuran huruf untuk hari */
+  margin-right: 10px; /* Jarak antara hari dan bulan/tanggal */
+}
+
+.month-date-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+
+.month-date {
+  font-size: 1.7rem; /* Ukuran huruf untuk bulan dan tanggal */
+  margin-right: 40px; /* Jarak antara bulan/tanggal dan separator */
+}
+
+.separator {
+  width: 1px; /* Lebar separator */
+  height: 80px; /* Tinggi separator yang lebih panjang */
+  background-color: #333; /* Warna separator */
+  margin: 20px 0; /* Jarak horizontal di kedua sisi separator */
+}
+
+.time {
+  font-size: 1.7rem; /* Ukuran huruf untuk jam */
+  margin-left: 40px;
+}
+
+.location {
+  font-size: 1.2rem; /* Ukuran huruf untuk lokasi */
+  color: #555; /* Warna teks lokasi */
+}
+
+/* Tombol Akses Peta */
+.map-button {
+  display: inline-block;
+  margin-top: 20px; /* Jarak antara lokasi dan tombol */
+  padding: 10px 20px; /* Padding tombol */
+  background-color: var(--primary-color); /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  border-radius: 5px; /* Sudut membulat */
+  font-size: 1rem; /* Ukuran huruf tombol */
+}
+
+.map-button:hover {
+  color: var(--primary-color); /* Warna saat hover */
+  background-color: #f3f3f3;
+}
+
+/* Section 5: Ayat Al-Qur'an and Translation */
+#section5 {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#section5 .lottie-container-quran {
+  width: 100px; /* Ukuran animasi lebih kecil */
+  height: 100px;
+  margin: 0 auto 20px; /* Jarak animasi ke judul */
+}
+
+#section5 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.quran-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.arabic-text {
+  font-size: 1.8em;
+  color: #444;
+  margin-bottom: 20px;
+  font-family: "Lateef", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.8;
+}
+
+.translation-text {
+  font-size: 0.7rem;
+  color: #666;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.surah {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  color: white;
+  padding: 6px;
+}
+
+/* Section 6: Gallery like Pinterest */
+#section6 {
+  background-color: #f9f9f9;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#section6 .lottie-container-gallery {
+  width: 70px; /* Ukuran animasi lebih kecil */
+  height: 70px;
+  margin: 0 auto 20px; /* Jarak animasi ke judul */
+}
+
+#section6 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
+  justify-items: center;
+}
+
+.gallery-item {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  position: relative;
+  text-align: center;
+}
+
+.modal-image {
+  max-width: 80%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  color: #ccc;
+}
+
+/* Section 7: RSVP and Messages */
+#section7 {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#section7 .lottie-container-rsvp {
+  width: 80px; /* Ukuran animasi lebih kecil */
+  height: 80px;
+  margin: 0 auto 20px; /* Jarak animasi ke judul */
+}
+
+#section7 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+#rsvpForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#rsvpForm .form-group {
+  margin-bottom: 20px;
+}
+
+#rsvpForm input, #rsvpForm textarea, #rsvpForm select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#rsvpForm button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+#rsvpForm button:hover {
+  background-color: #f3f3f3;
+  color: var(--primary-color);
+}
+
+#messageList {
+  margin-top: 40px;
+}
+
+#messageList .message-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+#messageList .message-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+#messageList .message-item p {
+  margin-bottom: 10px;
+}
+
+/* Section 8: Gift */
+#section8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#section8 .lottie-container-gift {
+  width: 120px; /* Ukuran animasi lebih kecil */
+  height: 120px;
+  margin: 0 auto 20px; /* Jarak animasi ke judul */
+}
+
+#section8 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#section8 p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#showAccountButton, #copyButton {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+#showAccountButton:hover, #copyButton:hover {
+  background-color: #f3f3f3;
+  color: var(--primary-color);
+}
+
+#bankAccountContainer {
+  margin-top: 20px;
+}
+
+/* Section 9: Thank You */
+#section9 {
+  color: black;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#section9 .lottie-container-thankyou {
+  width: 150px; /* Ukuran animasi lebih kecil */
+  height: 150px;
+  margin: 0 auto 20px; /* Jarak animasi ke judul */
+}
+
+#section9 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#section9 p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto; /* Center the paragraph */
+}
+
+
+/* Footer */
+footer {
+  background-color: white; /* Warna latar belakang footer */
+  color: #333;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 40px; /* Atur tinggi logo */
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-icon {
+  color: #333; /* Warna ikon */
+  font-size: 24px; /* Ukuran ikon */
+  margin-left: 15px; /* Jarak antar ikon */
+  text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.social-icon:hover {
+  color: #ff6b6b; /* Warna saat hover */
+}
+
+/* Media Query for Mobile (Max Width 768px) */
+@media (max-width: 768px) {
+  #section4 {
+    flex-direction: column;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di perangkat mobile */
+  }
+  
+  .gallery-item {
+    width: 100%; /* Pastikan gambar tetap 100% dari kolom yang tersedia */
+  }
+}
