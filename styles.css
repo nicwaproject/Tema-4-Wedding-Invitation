@@ -168,6 +168,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   text-align: center;
+  z-index: 2;
 }
 
 #section1 h2 {
@@ -187,7 +188,6 @@ nav ul li a:hover {
   padding: 100px 20px;
   display: flex;
   justify-content: center;
-  text-align: center;
   text-align: center;
 }
 
