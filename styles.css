@@ -183,7 +183,11 @@ nav ul li a:hover {
 
 /* ...................................SECTION 2.............................. */
 #section2 {
+  position: relative;
   padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   text-align: center;
 }
 
@@ -235,6 +239,36 @@ nav ul li a:hover {
 .time-box span:last-child {
   font-size: 1rem;
   color: #333;
+}
+
+.corner-image {
+  position: absolute;
+  width: 320px; /* Sesuaikan ukuran gambar */
+  height: auto; /* Sesuaikan dengan proporsi gambar */
+  z-index: 1;
+}
+
+.top-left {
+  top: 0px;
+  left: 0px;
+}
+
+.bottom-right {
+  bottom: 0px;
+  right: 0px;
+}
+
+.pulse {
+  animation: pulse 5s infinite; /* Durasi dan jumlah putaran animasi */
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1); /* Skala maksimum */
+  }
 }
 
 /* Section 3: The Bride and The Groom Profile */
@@ -742,5 +776,8 @@ footer {
   
   .gallery-item {
     width: 100%; /* Pastikan gambar tetap 100% dari kolom yang tersedia */
+  }
+    .corner-image {
+    width: 220px;
   }
 }
